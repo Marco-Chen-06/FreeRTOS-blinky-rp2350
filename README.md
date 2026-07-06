@@ -10,16 +10,19 @@ Note for FREERTOS_KERNEL_PATH, you want to point it to the official FreeRTOS Ker
 https://github.com/FreeRTOS/FreeRTOS-Kernel
 
 Also, you'll want to run a 
-`git submodule update --init --recursive` 
+```
+git submodule update --init --recursive
+```
 on the FreeRTOS Kernel that you cloned. This is because the RP2350 FreeRTOS port (RP2350_ARM_NTZ) is within the FreeRTOS-Kernel_Community-Supported-Ports submodule of the FreeRTOS kernel. A link to that subdirectory in the FreeRTOS kernel is below:
 https://github.com/FreeRTOS/FreeRTOS-Kernel-Community-Supported-Ports/tree/bae4c7aa19009825ba48071a8fe25dcb8be84880/GCC/RP2350_ARM_NTZ
 
 Then make and build.
-`mkdir build
+```
+mkdir build
 cd build
 cmake -DPICO_BOARD=pico2 ..
 make
-`
+```
 
 Then run or flash your code in however method you want to.
 
