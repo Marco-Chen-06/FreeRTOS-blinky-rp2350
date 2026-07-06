@@ -1,15 +1,14 @@
 cmake_minimum_required(VERSION 3.13)
+
+set(PICO_PLATFORM rp2350-arm-s)
+
 include(pico_sdk_import.cmake)
 
 project(FreeRTOS-blinky-rp2350-project C CXX ASM)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-set(PICO_PLATFORM rp2350-arm-s)
-set(PICO_BOARD pico2)
 
 include(FreeRTOS_Kernel_import.cmake)
 
