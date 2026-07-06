@@ -1,12 +1,13 @@
 # FreeRTOS-blinky-rp2350
 Blink and LED every 250 ms and print hello world every 1000 ms with FreeRTOS on the rp2350.
 
-# How to build:
+## How to build:
 Make sure the following include paths are updated on your system: \
 PICO_SDK_PATH \
 FREERTOS_KERNEL_PATH
 
-Note for FREERTOS_KERNEL_PATH, you want to point it to the official FreeRTOS Kernel, not the raspberrypi fork of the FreeRTOS Kernel. This is because the RP2350 port has been upstreamed, so the raspberrypi fork is outdated. \ 
+Note for FREERTOS_KERNEL_PATH, you want to point it to the official FreeRTOS Kernel, not the raspberrypi fork of the FreeRTOS Kernel. This is because the RP2350 port has been upstreamed, so the raspberrypi fork is outdated.
+
 https://github.com/FreeRTOS/FreeRTOS-Kernel 
 
 Also, you'll want to run a  
@@ -24,7 +25,10 @@ cmake -DPICO_BOARD=pico2 ..
 make
 ```
 
-Then run or flash your code in however method you want to.
+## All steps taken to set everything up
+
+
+
 
 Where I got the files from:
 FreeRTOS config: https://github.com/gabor-budai/FreeRTOS_PICO2350/blob/master/src/FreeRTOSConfig_examples_common.h
