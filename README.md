@@ -31,7 +31,7 @@ make
      - it is worth noting the FreeRTOS configEnable_MPU, configENABLE_TRUSTZONE, configRUN_FREERTOS_SECURE_ONLY, configENABLE_FPU, and configMAX_SYSCALL_INTERRUPT_PRIORITY, since they are specifically discussed in the README of the rp2350 FreeRTOS Kernel Port's README.     
 - CMakeLists was created, adding the following important lines:
 ```
-include(FreeRTOS_KERNEL_import.cmake)
+include(FreeRTOS_Kernel_import.cmake)
 ```
 ```
 target_link_libraries(your_project PRIVATE
