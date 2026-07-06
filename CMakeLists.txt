@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(PICO_PLATFORM rp2350-arm-s)
+set(PICO_BOARD pico2)
 
 include(FreeRTOS_Kernel_import.cmake)
 
