@@ -1,4 +1,4 @@
-# FreeRTOS-blinky-rp2350
+# freertos-blinky-rp2350
 Blink and LED every 250 ms and print hello world (over uart) every 1000 ms with FreeRTOS on the rp2350.
 
 ## How to build:
