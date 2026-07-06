@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.13)
 include(pico_sdk_import.cmake)
 
-project(blinky-rp2350-project C CXX ASM)
+project(FreeRTOS-blinky-rp2350-project C CXX ASM)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(PICO_PLATFORM rp2350-arm-s)
 
 include(FreeRTOS_Kernel_import.cmake)
 
@@ -16,7 +18,7 @@ pico_sdk_init()
 set(PICO_DEOPTIMIZED_DEBUG 1)
 
 add_executable(blinky
-    blinky.c
+    src/main.c
 )
 
 target_link_libraries(blinky
@@ -43,8 +45,7 @@ target_compile_definitions(blinky PRIVATE
 
 # be explicit about using rp2350
 target_include_directories(blinky PRIVATE
-    ${PICO_SDK_PATH}/src/rp2350/hardware_regs/include
-    ${PICO_SDK_PATH}/src/rp2350/hardware_structs/include
+    include/
 )
 
 # remove optimization for debugging
